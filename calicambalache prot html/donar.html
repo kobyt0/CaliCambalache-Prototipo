@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar-figma">
+        <h1 class="text-2xl text-orange-600 tracking-tighter">CaliCambalache</h1>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="donar.html" class="active">Donar</a>
+            <a href="mensajes.html">Mensajes</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="flex items-center gap-2 mb-2">
+            <h2 class="text-3xl">Detalles de la Donación</h2>
+            <span class="text-orange-400 text-2xl">♡</span>
+        </div>
+        <p class="text-slate-500 font-bold mb-10">Completa los detalles a continuación para coordinar la entrega.</p>
+
+        <form>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="input-group">
+                    <label class="label-figma">Ubicación de la entrega en Cali</label>
+                    <input type="text" class="input-figma" placeholder="Barrio San Antonio, Carrera 4">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+
+                <div class="input-group">
+                    <label class="label-figma">Alimento(s)</label>
+                    <input type="text" class="input-figma" placeholder="Pasta con Vegetales">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="input-group">
+                    <label class="label-figma">Horario Preferido</label>
+                    <input type="text" class="input-figma" placeholder="Entre 11:00 AM y 2:00 PM">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+
+                <div class="input-group">
+                    <label class="label-figma">Día de Entrega</label>
+                    <input type="text" class="input-figma" placeholder="02-05-2025">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="label-figma">Cantidad (KG o Porciones)</label>
+                    <div class="qty-badge"><span id="qtyVal">150</span> Kg/Porc.</div>
+                </div>
+                <input type="range" min="20" max="500" value="150" class="range-slider" id="qtyInput">
+                <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                    <span>Min 20</span>
+                    <span>Max 500</span>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <label class="label-figma">Fotos de los alimentos</label>
+                <div class="photo-upload-grid">
+                    <img src="img/pasta.jpg" class="photo-item" alt="Pasta">
+                    <div class="photo-add-btn">
+                        <span class="text-2xl font-light">+</span>
+                        <span class="text-[9px] font-black uppercase">Agregar más</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-6 bg-slate-50 rounded-[24px] border border-slate-100 mt-10 mb-8">
+                <input type="checkbox" class="w-5 h-5 rounded border-slate-300 text-orange-600" checked>
+                <p class="text-[11px] font-bold text-slate-500 leading-tight">
+                    Aseguro que la calidad e higiene de los alimentos se ha mantenido según las pautas de seguridad estándar.
+                </p>
+            </div>
+
+            <button type="button" class="btn-figma-solid">Confirmar Donación</button>
+        </form>
+    </main>
+
+    <script>
+        // Actualización dinámica de la cantidad
+        const input = document.getElementById('qtyInput');
+        const display = document.getElementById('qtyVal');
+        input.oninput = () => display.innerText = input.value;
+    </script>
+</body>
+</html>
