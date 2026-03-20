@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar-figma">
+        <h1 class="text-2xl text-orange-600 tracking-tighter">CaliCambalache</h1>
+        <div class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="donar.html">Donar</a>
+            <a href="mensajes.html">Mensajes</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-10 py-20">
+        <div class="mb-20">
+            <span class="inline-block bg-orange-50 text-orange-600 px-4 py-1 rounded-full text-[11px] font-black uppercase tracking-widest mb-6">Haz un impacto social</span>
+            <h2 class="text-5xl md:text-6xl font-[800] leading-[1.1] mb-6">¿Quieres reducir el <br><span class="text-orange-500">desperdicio de alimentos?</span></h2>
+            <p class="text-slate-500 text-xl font-medium max-w-2xl">Conectamos donantes con fundaciones y comedores comunitarios para combatir el hambre en Cali.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="figma-card">
+                <div class="w-14 h-14 bg-orange-100 rounded-2xl mb-8 flex items-center justify-center text-orange-600">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M12 4v16m8-8H4"/></svg>
+                </div>
+                <h3 class="text-2xl mb-4">Publicar Alimentos</h3>
+                <p class="text-slate-500 font-semibold leading-relaxed">Dona tus excedentes de comida para las personas necesitadas en tu comuna.</p>
+            </div>
+
+            <div class="figma-card">
+                <div class="w-14 h-14 bg-blue-100 rounded-2xl mb-8 flex items-center justify-center text-blue-600">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m4 0h1m-5 4h1m4 0h1m-5 4h1m4 0h1"/></svg>
+                </div>
+                <h3 class="text-2xl mb-4">Org. Receptora</h3>
+                <p class="text-slate-500 font-semibold leading-relaxed">Conviértete en receptor para fundaciones y comedores registrados.</p>
+            </div>
+
+            <div class="action-card-dark shadow-2xl">
+                <div>
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl mb-8 flex items-center justify-center text-orange-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <h3 class="text-3xl leading-[1.1] mb-2">Necesito <br>alimentos</h3>
+                </div>
+                <button class="btn-figma-solid">Ir ahora</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
